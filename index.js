@@ -35,6 +35,6 @@ app.get('/profile/:id', (req,res)=>{ profile.handleProfile( req , res , db )})
 app.post('/image',(req,res)=>{ image.handleImage( req , res, db)  })
 app.post('/imageurl',(req,res)=>{ image.handleApi( req , res)  })
 
-app.listen(5000,()=>{
+app.listen(porcess.env.PORT || 5000,()=>{
     console.log("App is working on port 5000");
 })
