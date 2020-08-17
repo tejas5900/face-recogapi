@@ -25,7 +25,6 @@
     "knex": "^0.21.2",
     "node-modules": "^1.0.1",
     "package-lock.json": "^1.0.0",
-    "pg": "^8.3.0",
-    "require-stack": "^1.0.2"
+    "pg": "^8.3.0"
   }
 }
