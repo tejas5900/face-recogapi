@@ -1,7 +1,7 @@
 const handleRegister=(req,res,db,bcrypt)=>{
     const {name,email,password}=req.body;
     if(!email || !name || !password){
-        return res.status(400).json("Form submission error");
+        return res.status(400).json("Form submission error");np
     }
     const hash = bcrypt.hashSync(password);
     db.transaction(trx=>{
@@ -24,7 +24,7 @@ const handleRegister=(req,res,db,bcrypt)=>{
     .then(trx.commit)
     .catch(trx.rollback)
     })
-   .catch(err=>res.status(400).json("unable to register")
+   .catch(err=>res.status(400).json('unable to register')
     )
 }
 
