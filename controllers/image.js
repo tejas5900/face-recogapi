@@ -18,7 +18,7 @@ db('userinfo').where('id', '=', req.body.id)
 .increment('entries', 1)
 .returning('entries')
 .then(entries=>{
-    console.log(entries[0]);
+    res.json(entries);
     })
 .catch(err=>{
     res.status(400).json("error while loading the image")
